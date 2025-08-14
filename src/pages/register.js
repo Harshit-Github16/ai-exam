@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 
 export default function RegisterPage() {
   const [firstName, setFirstName] = useState('');
@@ -69,7 +68,7 @@ export default function RegisterPage() {
         <button type="submit" disabled={loading} className="mt-4 w-full rounded-lg px-4 py-2 text-white" style={{background:'var(--color-primary)'}}>
           {loading ? 'Creating...' : 'Register'}
         </button>
-        <p className="text-sm mt-3 text-slate-500">Already have an account? <Link href="/login" className="underline" style={{color:'var(--color-dark)'}}>Login</Link></p>
+        <p className="text-sm mt-3 text-slate-500">Already have an account? <a href="/login" className="underline" style={{color:'var(--color-dark)'}}>Login</a></p>
       </form>
     </div>
   );
