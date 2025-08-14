@@ -9,9 +9,15 @@ export default function EduMitraLogin() {
   const [error, setError] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const router = useRouter();
+
   async function handleLogin(e) {
     e.preventDefault();
-    const res = await signIn('credentials', { redirect: false, identifier: username, password });
+    const res = await signIn('credentials', {
+      redirect: false,
+      identifier: username,
+      password
+    });
+
     if (res?.ok) {
       setError("");
       setIsLoggedIn(true);
@@ -23,7 +29,10 @@ export default function EduMitraLogin() {
   if (isLoggedIn) return router.push('/dashboard');
 
   return (
-    <div className="min-h-[calc(100vh-3.5rem)] flex items-center justify-center" style={{ background:'var(--color-muted)', fontFamily: "'Poppins', sans-serif" }}>
+    <div
+      className="min-h-[calc(100vh-3.5rem)] flex items-center justify-center"
+      style={{ background: 'var(--color-muted)', fontFamily: "'Poppins', sans-serif" }}
+    >
       <motion.div
         className="flex rounded-lg shadow-lg w-full max-w-4xl overflow-hidden"
         initial={{ opacity: 0, y: 50 }}
@@ -33,15 +42,17 @@ export default function EduMitraLogin() {
       >
         {/* Left side form */}
         <div className="w-1/2 p-10 flex flex-col justify-center bg-white">
-          <h1 className="text-3xl font-bold mb-1" style={{color:'var(--color-dark)'}}>PrepVerse</h1>
-          <p className="mb-6 font-medium" style={{color:'var(--color-dark)'}}>Welcome! Please login to continue.</p>
+          <h1 className="text-3xl font-bold mb-1" style={{ color: 'var(--color-dark)' }}>PrepVerse</h1>
+          <p className="mb-6 font-medium" style={{ color: 'var(--color-dark)' }}>
+            Welcome! Please login to continue.
+          </p>
 
           <form onSubmit={handleLogin} className="space-y-6">
             <motion.input
               type="text"
               placeholder="Username"
               className="w-full border rounded-md p-3 focus:outline-none"
-              style={{borderColor:'var(--color-secondary)', color:'var(--color-dark)'}}
+              style={{ borderColor: 'var(--color-secondary)', color: 'var(--color-dark)' }}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               whileFocus={{ scale: 1.05 }}
@@ -52,7 +63,7 @@ export default function EduMitraLogin() {
               type="password"
               placeholder="Password"
               className="w-full border rounded-md p-3 focus:outline-none"
-              style={{borderColor:'var(--color-secondary)', color:'var(--color-dark)'}}
+              style={{ borderColor: 'var(--color-secondary)', color: 'var(--color-dark)' }}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               whileFocus={{ scale: 1.05 }}
@@ -72,18 +83,32 @@ export default function EduMitraLogin() {
             <motion.button
               type="submit"
               className="w-full text-white font-semibold py-3 rounded-md shadow-md"
-              style={{background:'var(--color-primary)'}}
+              style={{ background: 'var(--color-primary)' }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Login
             </motion.button>
+
+            {/* Register Option */}
+            <motion.button
+              type="button"
+              className="w-full font-semibold py-3 rounded-md shadow-md border"
+              style={{ borderColor: 'var(--color-primary)', color: 'var(--color-primary)' }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => router.push('/register')}
+            >
+              Register
+            </motion.button>
           </form>
         </div>
 
-        {/* Right side dummy image loader */}
-        <div className="w-1/2 flex items-center justify-center relative" style={{ overflow: "hidden", background:'var(--color-secondary)' }}>
-          {/* Dummy image loader animation */}
+        {/* Right side animation */}
+        <div
+          className="w-1/2 flex items-center justify-center relative"
+          style={{ overflow: "hidden", background: 'var(--color-secondary)' }}
+        >
           <motion.div
             className="w-48 h-48 rounded-xl bg-indigo-400"
             animate={{
@@ -102,4 +127,3 @@ export default function EduMitraLogin() {
     </div>
   );
 }
-
