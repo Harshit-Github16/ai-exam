@@ -159,13 +159,13 @@ export default function RegisterPage() {
         {/* Link */}
         <p className="text-sm mt-4" style={{ color: 'var(--color-surface)' }}>
           Already have an account?{' '}
-          <a
+          <Link
             href="/login"
             className="underline"
             style={{ color: 'var(--color-dark)' }}
           >
             Login
-          </a>
+          </Link>
         </p>
       </form>
     </div>
