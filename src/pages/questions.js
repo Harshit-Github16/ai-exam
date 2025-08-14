@@ -40,7 +40,7 @@ export default function QuestionsArchivePage() {
 
   return (
     <div className="min-h-[calc(100vh-3.5rem)] relative overflow-hidden" style={{background:'var(--color-muted)'}}>
-      <img src="/images/HeroSlider.png" alt="Questions banner" className="pointer-events-none absolute -top-10 -left-10 w-72 h-44 object-cover rounded-2xl opacity-25" />
+      {/* <img src="/images/HeroSlider.png" alt="Questions banner" className="pointer-events-none absolute -top-10 -left-10 w-72 h-44 object-cover rounded-2xl opacity-25" /> */}
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">Previous Years & Important Questions</h1>
         <p className="text-slate-600 mt-1 mb-6">Browse curated sets to practice efficiently.</p>

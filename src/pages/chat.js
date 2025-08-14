@@ -51,11 +51,11 @@ export default function ChatPage() {
       style={{ background: 'var(--color-muted)', fontFamily: 'var(--font-sans)' }}
     >
       {/* Decorative Image */}
-      <img
+      {/* <img
         src="/images/HeroSlider.png"
         alt="Chat banner"
         className="pointer-events-none absolute top-4 right-4 w-60 h-36 object-cover rounded-2xl opacity-20"
-      />
+      /> */}
 
       {/* Chat Container */}
       <div className="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6 overflow-y-auto space-y-3">

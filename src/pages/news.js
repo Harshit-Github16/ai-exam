@@ -54,11 +54,11 @@ export default function NewsPage() {
       style={{ background: 'var(--color-muted)', fontFamily: 'var(--font-sans)' }}
     >
       {/* Decorative Image */}
-      <img
+      {/* <img
         src="/images/HeroSlider.png"
         alt="News banner"
         className="pointer-events-none absolute -bottom-10 right-0 w-72 h-40 object-cover rounded-2xl opacity-20"
-      />
+      /> */}
 
       <div className="max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 flex-grow flex flex-col">
         <div>

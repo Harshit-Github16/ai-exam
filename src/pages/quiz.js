@@ -58,11 +58,11 @@ export default function QuizPage() {
       style={{ background: 'var(--color-muted)', fontFamily: 'var(--font-sans)' }}
     >
       {/* Background decorative image */}
-      <img
+      {/* <img
         src="/images/HeroSlider.png"
         alt="Quiz banner"
         className="pointer-events-none absolute -bottom-10 -left-10 w-72 h-40 object-cover rounded-2xl opacity-20"
-      />
+      /> */}
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
         {/* Header with timer */}

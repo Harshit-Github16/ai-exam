@@ -39,11 +39,11 @@ export default function PricingPage() {
       style={{ background: 'var(--color-muted)', fontFamily: 'var(--font-sans)' }}
     >
       {/* Decorative image */}
-      <img
+      {/* <img
         src="/images/HeroSlider.png"
         alt="Pricing banner"
         className="pointer-events-none absolute -top-10 right-0 w-80 h-48 object-cover rounded-2xl opacity-20"
-      />
+      /> */}
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
         {/* Heading */}
